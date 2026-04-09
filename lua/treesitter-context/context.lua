@@ -321,7 +321,7 @@ function M.get(winid)
   winid = winid or api.nvim_get_current_win()
 
   if not api.nvim_win_is_valid(winid) then
-    winid = api.nvim_get_current_win()
+    return
   end
 
   local bufnr = api.nvim_win_get_buf(winid)
